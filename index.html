@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <title>Address Book</title>
+        <meta name="description" content="" />
+        <meta name="author" content="Lawrence" />
+        
+        <!-- styles -->
+        
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+                
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner topNav">
+                <h1>Address Book with Backbone</h1>
+            </div>
+        </div>
+        
+        <div id="contacts">
+            <form id="addPerson" action="#">
+                <div>
+                    <label for="image">Image: </label>
+                    <input id="image" type="file" /><br />
+                    
+                    <label for="firstName">First Name: </label>
+                    <input id="firstName" type="text" /><br />
+                    
+                    <label for="lastName">Last Name: </label>
+                    <input id="lastName" type="text" /><br />
+                    
+                    <label for="city">City: </label>
+                    <input id="city" type="text" /><br />
+                    
+                    <label for="state">State: </label>
+                    <input id="state" type="text" /><br />
+                    
+                    <label for="phone">Phone Number: </label>
+                    <input id="phone" type="text" /><br />
+                    
+                    <button id="addContact">Add Contact</button>
+                </div>
+            </form>
+        </div>
+        
+        <script id="personTemplate" type="text/template">
+                <div id="imageHolder">
+                    <img src="img/default.gif" width="70px;">
+                </div>
+                <div id="contactInfo">
+                    <ul>
+                        <li><%= firstName %> <%= lastName %></li>
+                        <li><%= city %>, <%= state %></li>
+                        <li><%= phone %></li>
+                    </ul>
+                </div>
+                <button class="delete">Delete</button>
+        </script>        
+                 
+        <!-- JS dependencies -->
+        <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/libs/underscore/underscore.js"></script>
+        <script type="text/javascript" src="js/libs/backbone/backbone.js"></script>
+        <script type="text/javascript" src="js/models/person.js"></script>
+        <script type="text/javascript" src="js/views/person.js"></script>
+        <script type="text/javascript" src="js/collections/people.js"></script>
+        <script type="text/javascript" src="js/views/people.js"></script>
+        <script type="text/javascript" src="js/apps.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,39 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #2E2E2E;
+}
+h1 {
+	color: #ffffff;
+	font: 18px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+
+.topNav {
+	height: 73px;
+}
+#contacts {
+	margin-top: 80px;
+	float: left;
+}
+#person {
+	background-color: #B8C0C3;
+	border: 1px solid #000000;
+	width: 400px;
+	min-height: 60px;
+	float: left;
+}
+#imageHolder {
+	width: 70px;
+	float: left;
+}
+
+#contactInfo {
+	float: left;
+}
+
+.delete {
+	float: right;
+}
