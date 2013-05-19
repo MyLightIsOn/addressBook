@@ -1,14 +1,16 @@
-var app = app || {};
+define(['underscore', 'backbone'], function(_, Backbone) {
 
-app.Person = Backbone.Model.extend({
-	
-	defaults: {
-		image: 'img/default.gif',
-		firstName: 'Unknown',
-		lastName: 'Unknown',
-		city: 'Unknown',
-		state: 'Unknown',
-		phone: 'Unknown'
-	}
+	Person = Backbone.Model.extend({
+		
+		defaults: {
+			image: 'img/default.gif',
+			firstName: 'Unknown',
+			lastName: 'Unknown',
+			address: 'Uknown',
+			city: 'Unknown',
+			state: 'Unknown',
+			phone: 'Unknown'
+		}
+	});
+	return Person;
 });
-

@@ -1,5 +1,10 @@
-var app = app || {};
+define(['underscore','backbone','models/person'],function(_,Backbone,Person){
 
-app.People = Backbone.Collection.extend({
-	model: app.Person
+	People = Backbone.Collection.extend({
+		model: Person
+	});
+	
+	return People	
 });
+
+

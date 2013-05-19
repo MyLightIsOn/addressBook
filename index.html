@@ -15,7 +15,8 @@
         
         <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
         <link href="css/style.css" type="text/css" rel="stylesheet" />
-                
+        <script data-main="js/apps" src="js/libs/require/require.js"></script>
+
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -48,31 +49,7 @@
                     <button id="addContact">Add Contact</button>
                 </div>
             </form>
-        </div>
-        
-        <script id="personTemplate" type="text/template">
-                <div id="imageHolder">
-                    <img src="img/default.gif" width="70px;">
-                </div>
-                <div id="contactInfo">
-                    <ul>
-                        <li><%= firstName %> <%= lastName %></li>
-                        <li><%= city %>, <%= state %></li>
-                        <li><%= phone %></li>
-                    </ul>
-                </div>
-                <button class="delete">Delete</button>
-        </script>        
-                 
-        <!-- JS dependencies -->
-        <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
-        <script type="text/javascript" src="js/libs/underscore/underscore.js"></script>
-        <script type="text/javascript" src="js/libs/backbone/backbone.js"></script>
-        <script type="text/javascript" src="js/models/person.js"></script>
-        <script type="text/javascript" src="js/views/person.js"></script>
-        <script type="text/javascript" src="js/collections/people.js"></script>
-        <script type="text/javascript" src="js/views/people.js"></script>
-        <script type="text/javascript" src="js/apps.js"></script>
-        
+        </div>    
+ 
     </body>
 </html>
