@@ -1,10 +1,9 @@
-define(['underscore','jquery','backbone','text!templates/person.html'],function(_,$,Backbone,personTemplate){
+define(['underscore','jquery','backbone','handlebars','text!templates/person.html'],function(_,$,Backbone,handlebars,personTemplate){
 	
 	PersonView = Backbone.View.extend({
 		
 		tagName: 'div',
 		id: 'person',
-		template: _.template( $(personTemplate).html() ),
 		
 		events: {
 			'click .delete' : 'removeContact'
@@ -16,11 +15,12 @@ define(['underscore','jquery','backbone','text!templates/person.html'],function(
 		},
 		
 		render: function(){
-			this.$el.html(
-				this.template(this.model.toJSON())
-			);
-		return this;
-		}
+      		var js = this.model.toJSON();
+      		var template = Handlebars.compile($(personTemplate).html());
+      		$(this.el).html(template(js));
+      		return this;  
+   		},
+
 	});
 	return PersonView;
 });

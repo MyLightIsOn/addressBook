@@ -5,7 +5,8 @@ require.config({
     	'underscore' : 'libs/underscore/underscore',
     	'jquery' : 'libs/jquery/jquery',
     	'backbone' : 'libs/backbone/backbone',
-    	'text': 'libs/require/text'
+    	'text': 'libs/require/text',
+    	'handlebars': 'libs/handlebars/handlebars'
     }, // set up custom paths to libraries, or paths to RequireJS plugins
     
     shim: {
@@ -15,6 +16,9 @@ require.config({
         'backbone': {
             deps: ['underscore', 'jquery'],
             exports: 'Backbone'
+        },
+        'handlebars': {
+            exports: 'Handlebars'
         }
     }
 
@@ -55,7 +59,7 @@ var person = [
 	        },
 ];
 
-require(['underscore','backbone','js/views/people.js'], function(_,Backbone,PeopleView){
+require(['underscore','backbone','handlebars','js/views/people.js'], function(_,Backbone,handlebars,PeopleView){
 	new PeopleView( person );
 });
 
